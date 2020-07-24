@@ -141,4 +141,7 @@
       <Name>CovidCounter</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\icon.png" />
+  </ItemGroup>
 </Project>
