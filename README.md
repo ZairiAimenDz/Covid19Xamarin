@@ -5,6 +5,8 @@
 # Covid19Xamarin
 
 A Xamarin Forms Powered Covid-19 Tracker, Using Some APIs From PostMan.
+Downloadable Through The Link Bellow From My GDrive (Because Google Bans Every App On It's Playstore That Has The Word COVID On It)
+https://drive.google.com/file/d/14YHgj2KewEcP5sJzWvq_ED6tJ9R-WZzf/view?usp=sharing
 
 ## More Details
 
