@@ -1,3 +1,7 @@
+<img src="Plugin Icon - 1 (2).png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
 # Covid19Xamarin
 
 A Xamarin Forms Powered Covid-19 Tracker, Using Some APIs From PostMan.
