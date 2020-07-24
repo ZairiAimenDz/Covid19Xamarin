@@ -16,3 +16,7 @@ One of The Most Inspiring Designs And Doable Ones So I Decided To Make It.
 - Creating ContentPages And ContentViews And Using Them
 
 - Using Charts (Micro Charts)
+
+<img src="iMac - 1.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
