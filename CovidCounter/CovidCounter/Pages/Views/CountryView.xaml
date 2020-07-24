@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CovidCounter.Pages.Views.CountryView">
+    <Frame CornerRadius="20" Padding="0" Margin="12,5" VerticalOptions="Start" BackgroundColor="#473f97">
+        <Expander>
+            <Expander.Header>
+                <Frame BackgroundColor="#574DB8" CornerRadius="20">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame CornerRadius="100" WidthRequest="18" HeightRequest="18" Grid.Column="0" Grid.Row="0">
+                            <Image Source="{Binding countryInfo.flag}" WidthRequest="32" Margin="-48" HeightRequest="32" />
+                        </Frame>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Grid.Row="0" VerticalOptions="Center">
+                            <Label Text="{Binding country}" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="White" FontSize="24" Margin="20,0"/>
+                            <Label TextColor="#eee" FontSize="24" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="&#xf105;" FontFamily="{StaticResource Key=Solid}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}" Value="True">
+                                        <Setter Property="Text" Value="&#xf107;">
+                                        </Setter>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </Expander.Header>
+            <StackLayout Padding="20">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Total Cases" TextColor="White" FontSize="16"/>
+                        <Label Text="{Binding cases,StringFormat='{0:N0}'}" TextColor="Red" FontSize="16"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Active Cases" TextColor="White" FontSize="16"/>
+                        <Label Text="{Binding active,StringFormat='{0:N0}'}" TextColor="Yellow" FontSize="16"/>
+                    </StackLayout>
+                </StackLayout>
+                <Grid>
+                    <Frame Grid.Column="0" CornerRadius="14" BackgroundColor="#ffb259">
+                        <StackLayout >
+                            <Label Text="New Cases" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="{Binding todayCases,StringFormat='{0:N0}'}" TextColor="Yellow" FontSize="16"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame  Grid.Column="1" CornerRadius="14" BackgroundColor="#ff5959">
+                        <StackLayout>
+                            <Label Text="New Deaths" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="{Binding todayDeaths,StringFormat='{0:N0}'}" TextColor="Yellow" FontSize="16"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="2" CornerRadius="14" BackgroundColor="#4cd97b">
+                        <StackLayout>
+                            <Label Text="New Recovered" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="{Binding todayRecovered,StringFormat='{0:N0}'}" TextColor="Yellow" FontSize="16"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Expander>
+    </Frame>
+</ContentView>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:MicroCharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             mc:Ignorable="d" BackgroundColor="#473f97"
+             x:Class="CovidCounter.Pages.GlobalStat">
+
+    <RefreshView Refreshing="RefreshView_Refreshing">
+        <ScrollView>
+            <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Label Text="Global Stats" Margin="20,10,20,0" FontSize="28" FontAttributes="Bold" TextColor="White" />
+                <Grid Padding="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Total" Grid.Row="0" Grid.Column="0" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                    <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="#ffb259">
+                        <StackLayout >
+                            <Label Text="Affected" TextColor="White" FontSize="14"/>
+                            <Label Text="{Binding total_cases,StringFormat='{0:N0}'}" TextColor="White" FontSize="22" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2" Grid.Column="0" BackgroundColor="#ff5959">
+                        <StackLayout >
+                            <Label Text="Deaths"  TextColor="White" FontSize="14" />
+                            <Label Text="{Binding total_deaths,StringFormat='{0:N0}'}"  TextColor="White" FontSize="22" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="3" Grid.Column="0" BackgroundColor="#4cd97b">
+                        <StackLayout>
+                            <Label Text="Recovered" TextColor="White" FontSize="14"/>
+                            <Label Text="{Binding total_recovered,StringFormat='{0:N0}'}" TextColor="White" FontSize="22" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="New" TextColor="White" Grid.Row="0" Grid.Column="1" FontSize="18" FontAttributes="Bold"/>
+                    <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#9059ff">
+                        <StackLayout >
+                            <Label x:Name="newinfec" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2" Grid.Column="1" BackgroundColor="#ff5959">
+                        <StackLayout >
+                            <Label x:Name="newdeath"  TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="3" Grid.Column="1" BackgroundColor="#4cd97b">
+                        <StackLayout>
+                            <Label x:Name="newrec" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Frame BackgroundColor="White" VerticalOptions="EndAndExpand" CornerRadius="30" Margin="0,0,0,-30" Padding="30,30,30,42">
+                    <StackLayout>
+                        <Label Text="Total Cases" TextColor="#473f97" FontSize="20" FontAttributes="Bold"/>
+                        <MicroCharts:ChartView x:Name="TotalCases" HeightRequest="200"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:views="clr-namespace:CovidCounter.Pages.Views"
+             mc:Ignorable="d"
+             x:Class="CovidCounter.Pages.AllCountries">
+    <RefreshView Refreshing="RefreshView_Refreshing">
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#473f97" Padding="0" Margin="5" CornerRadius="20">
+                    <SearchBar Placeholder="Search ..." CancelButtonColor="White" PlaceholderColor="White" TextColor="White" TextChanged="SearchBar_TextChanged"/>
+                </Frame>
+                <ActivityIndicator x:Name="LoadingStuff"  IsVisible="True" IsRunning="True"/>
+                <ListView x:Name="CountryList" SelectionMode="None"  HasUnevenRows="True" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <views:CountryView/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>

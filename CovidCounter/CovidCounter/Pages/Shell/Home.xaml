@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CovidCounter.Pages.Home">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#473f97" CornerRadius="30" Padding="12,120,12,0" Margin="0,-80,0,0" HeightRequest="200">
+                <StackLayout>
+                    <Label Text="Covid-19 Tracker" Margin="0,20" TextColor="White" FontSize="28" FontAttributes="Bold"/>
+                    <Label Margin="5" Text="Are You Feeling Sick ? Do Your Own Testing" TextColor="White"/>
+                    <Button Text="Take The Test" Clicked="Button_Clicked" BackgroundColor="#ff5959" CornerRadius="12" TextColor="White"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Prevention :" Margin="20,20,0,0" TextColor="#473f97" FontSize="24" FontAttributes="Bold"/>
+
+            <Frame BackgroundColor="#ffb259" CornerRadius="10" Margin="10">
+                <StackLayout>
+                    <Grid>
+                        <StackLayout Grid.Column="0">
+                            <Label Text="&#xe068;" TextColor="White" HorizontalOptions="Center" FontSize="32" FontFamily="{StaticResource Key=Solid}"/>
+                            <Label Text="Avoid Contact With People Arround You" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="&#xe063;" TextColor="White" HorizontalOptions="Center" FontSize="32" FontFamily="{StaticResource Key=Solid}"/>
+                            <Label Text="When Going Outside Always Wear A Mask" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="2">
+                            <Label Text="&#xe05e;" TextColor="White" HorizontalOptions="Center" FontSize="32" FontFamily="{StaticResource Key=Solid}"/>
+                            <Label Text="Always Wash Your Hands Or Use Sanitizer" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <Label Text="Common Symptoms :" Margin="20,0,0,0" TextColor="#473f97" FontSize="24" FontAttributes="Bold"/>
+
+            <Frame BackgroundColor="#9059ff" CornerRadius="10" Margin="10">
+                <StackLayout>
+                    <Grid>
+                        <StackLayout Grid.Column="0">
+                            <Label Text="&#xe061;" TextColor="White" HorizontalOptions="Center" FontSize="32" FontFamily="{StaticResource Key=Solid}"/>
+                            <Label Text="Dry Cough" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="&#xe067;" TextColor="White" HorizontalOptions="Center" FontSize="32" FontFamily="{StaticResource Key=Solid}"/>
+                            <Label Text="Shortness of breath" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="2">
+                            <Label Text="&#xe064;" TextColor="White" HorizontalOptions="Center" FontSize="32" FontFamily="{StaticResource Key=Solid}"/>
+                            <Label Text="Frequent Headaches" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
