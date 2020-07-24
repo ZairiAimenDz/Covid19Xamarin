@@ -58,6 +58,7 @@ namespace CovidCounter.Pages
         private void RefreshView_Refreshing(object sender, EventArgs e)
         {
             Refresh();
+            ((RefreshView)sender).IsRefreshing = false;
         }
     }
 

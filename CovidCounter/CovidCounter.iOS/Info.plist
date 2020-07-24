@@ -23,9 +23,9 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>CovidCounter</string>
+	<string>Covid 19 Tracker</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.CovidCounter</string>
+	<string>com.zairiaimendev.covid19tracker</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
